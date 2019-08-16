@@ -1,0 +1,284 @@
+/*---------------------------------------------------------------------*/
+/*                          OutLine                                    */
+/*
+    blue color used: #217dbb
+*/
+/*---------------------------------------------------------------------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    background-color: #fff;
+    color: #555;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+}
+/*---------------------------------------------------------------------*/
+/*                          REUSEABLE COMPONENTS                       */
+/*---------------------------------------------------------------------*/
+.row{   /*row will always be centered*/
+    max-width: 1140px;
+    margin: 0 auto 0 auto; /*margin: top right bottom left ***or*** margin: top/bottom left/right this will center our webpage*/
+}
+
+section{
+    padding: 80px 0px;;
+}
+
+.box{
+    padding: 1%;
+}
+
+/*---------------------------------------------------------------------*/
+/*                          HEADINGS                                   */
+/*---------------------------------------------------------------------*/
+h1, 
+h2,
+h3{
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+h1{
+    margin-top: 0; /*gets rid of the gap on top of browser*/
+    margin-bottom: 10px;
+    color: #fff;
+    /*this is relative to the base size under html(20px)*/
+    font-size: 240%;
+    word-spacing: 4px;
+    letter-spacing: 1px;
+}
+
+h2{
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+/*for the line under the title ALL IN ONE PLACE*/
+h2:after {
+    display: block;
+    height: 2px;
+    background-color: #217dbb;
+    content: " ";
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+h3{
+    font-size: 110%;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/*---------------------------------------------------------------------*/
+/*                          PARAGRAPHS                                 */
+/*---------------------------------------------------------------------*/
+.long-copy{
+    /*centers the text under the ALL IN ONE PLACE title*/
+    line-height: 145%;
+    /*add.ing width will no longer make the text centered so you must add the 15% margin */
+    width: 70%;
+    margin-left: 15%;
+}
+
+.box p{
+    font-size: 90%;
+    line-height: 145%;
+}
+
+/*---------------------------------------------------------------------*/
+/*                          ICONS                                      */
+/*---------------------------------------------------------------------*/
+.icon-big{
+    font-size: 350%;
+    display: block;
+    color: #217dbb;
+    margin-bottom: 10px;
+    margin: 0 auto;
+}
+
+/*---------------------------------------------------------------------*/
+/*                          BUTTONS                                    */
+/*---------------------------------------------------------------------*/
+
+/*link element in its normal state you can change the way the button looks after it has been clicked by changing the visited */
+.btn:link,
+.btn:visited,
+input[type=submit]{
+    /*to apply padding to inline elements you need to add display: inline-block;*/
+    display: inline-block;
+    padding: 10px 30px; /*10px top and bottom 30px left and right*/
+    font-weight: 300;
+    /*gets rid of the text underline*/
+    text-decoration: none;
+    /*rounds out button*/
+    border-radius: 200px;
+    color: #fff;
+    /*the backgorund will not change instantly but after .2 seconds like its fading in*/
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.btn-full:link,
+.btn-full:visited,
+input[type=submit]{
+    background-color: #3498db;
+    border: 1px solid #3498db;
+    margin-right: 15px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited{
+    border: 1px solid #3498db;
+}
+
+/*look the same before and after you hover your mouse over it*/
+.btn:hover,
+.btn:active,
+input[type=submit]:hover,
+input[type=submit]:active{
+    background-color: #217dbb;
+}
+
+.btn-full:hover,
+.btn-full:active{
+    border: 1px solid #217dbb;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active{
+    border: 1px solid #217dbb;
+}
+/*---------------------------------------------------------------------*/
+/*                          HEADER                                     */
+/*---------------------------------------------------------------------*/
+header{
+    /* adding a linear gradient makes adds a tint over the image (its like adding a image over another image)*/
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(imgs/hero.jpg);
+    /*to see entire image*/
+    background-size: cover;
+    /*centers backgorund image*/
+    background-position: center;
+    height: 100vh; /*100percent of the view port*/
+}
+
+.hero-text-box{
+    /* must be absolute since its the only way it can be vert and horz center it*/
+    position: absolute;
+    /*center the text*/
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    /*transforms the element to half of its width and half of its height*/
+    transform: translate(-50%,-50%);
+}
+
+.logo{
+    height: 100px;
+    width: auto;
+    float: left;
+    margin-top: 20px;
+}
+
+.main-nav{
+    float: right;
+    /*gets rid of bullet points*/
+    list-style: none;
+    margin-top: 55px;
+}
+
+/*selecting all li element*/
+.main-nav li{
+    /*we want to change the way they are displayed to inline blocks to make them side by side*/
+    display: inline-block;
+    margin-left: 40px;
+    
+}
+
+.main-nav li a:link,
+.main-nav li a:visited{
+    padding: 8px 0px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%; /*18px */
+    /*when adding a bottom border make sure it is in both before and after it is hovered over*/
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
+    
+}
+.main-nav li a:hover,
+.main-nav li a:active{
+    /*when adding a bottom border make sure it is in both before and after it is hovered over*/
+    border-bottom: 2px solid #217dbb;   
+}
+
+/*---------------------------------------------------------------------*/
+/*                          FORM                                       */
+/*---------------------------------------------------------------------*/
+
+.contact-form{
+    width: 60%;
+    margin: 0 auto;
+}
+
+input[type=text],
+input[type=email],
+textarea{
+    width: 100%;
+    padding: 7px;
+    /*rounds out edges*/
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+textarea{
+    height: 100px;
+}
+
+/*gets rid of the blue outline around the input boxes of your name, email, and message*/
+*:focus{
+    outline: none;
+}
+
+
+.creator {
+    float: left;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%
+}
+
+.author-text p{
+    margin-top: 60px;
+    margin-left: 10px;
+    float:left;
+}
+
+/*---------------------------------------------------------------------*/
+/*                          MADE BLACK REMOVE                          */
+/*---------------------------------------------------------------------*/
+
+.what-it-does {
+    background-color: #000000;
+    color: #c6c6c6;
+}
+
+.section-form {
+    background-color: black;
+    color: #c6c6c6;
+}
+
+.foot {
+    background-color: black;
+    color: #c6c6c6;
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" type="text/css" href="vendors/CSS/normalize.css">
+        <link rel="stylesheet" type="text/css" href="vendors/CSS/Grid.css"> <!-- responsivegrid.com-->
+        <link rel="stylesheet" type="text/css" href="resources/CSS/style.css">
+        <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400&display=swap" rel="stylesheet">
+        <title>PPT</title>
+        
+    
+    </head>
+    <body>
+        
+        <header>
+            <nav>
+                <div class="row">
+                    <img src="resources/images/cutoutLogo.png" alt="logo" class="logo">
+                    <!-- unordered list (ul) (like bullet points) -->
+                    <ul class="main-nav">
+                        <!-- the top bar is a list of links (li) -->
+                        <li> <a href="#">What this does</a> </li>
+                        <li> <a href="#">Contact</a> </li>
+                        <li> <a href="#">Creator</a> </li>
+                        <li> <a href="#">Sign In / Register</a> </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="hero-text-box">
+                <h1>Preferred Pay Tracker</h1>
+                <a class="btn btn-full" href="#">Get Started </a>  <!--link/button-->
+                <a class="btn btn-ghost" href="#">About</a>  <!--link/button-->
+            </div>
+        
+        </header>
+        
+        <!-- like the header, its a container that holds the next section of the page -->
+        <section class="what-it-does">
+            <div class="row">
+                <h2>All In One Place</h2>
+                <p class="long-copy">
+                    Hello, this is Preferred Pay Services the best way to keep track of the money owed to you by your employer. This is still in the early stages of development so any feedback would be appreciated bellow
+                </p>
+            </div>
+            
+            <div class="row">
+                <!-- col span-1-of-4 is from the grid.css -->
+                <div class="col span-1-of-4 box">
+                    <ion-icon class="icon-big" name="save"></ion-icon>
+                    <h3>Store time cards</h3>
+                    <p>No need to look through your gallery of photos again to find that one time card picture. We will store and save that photo for you with an easy to find interface
+                    </p>
+                </div>
+                <div class="col span-1-of-4 box">
+                    <ion-icon class="icon-big" name="calculator"></ion-icon>
+                    <h3>We do it for you</h3>
+                    <p>All you need to do is tell us your hours worked and we will calculate how much you earned on your paycheck for the end of each pay period.
+                    </p>
+                </div>
+                <div class="col span-1-of-4 box">
+                    <ion-icon class="icon-big" name="cash"></ion-icon>
+                    <h3>Keep track</h3>
+                    <p>All your money owed, tracked and managed all in one place. Whether that be in cash or clocked in hours you can keep watch of every penny you earned.
+                    </p>
+                </div>
+                <div class="col span-1-of-4 box">
+                    <ion-icon class="icon-big" name="map"></ion-icon>
+                    <h3>More To come</h3>
+                    <p>I am always excited to implement new features to the site to make your experience better. If you have any recommendations or comments please feel free to contact me and ill     do my best to add them.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!--FEEDBACK section -->
+        <section class="section-form">
+            <div class="row">
+                <h2>Looking forward to hearing from you</h2>
+            </div>
+            <div class="row">
+                <form method="post" action="#" class="contact-form">
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="name">Name</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="text" name="name" id="name" placeholder="Your name" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="email" name="email" id="email" placeholder="Your email" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label>Let Us Know</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <textarea name="message" placeholder="Your message"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label>&nbsp;</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="submit" value="Send it">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    
+    <!--FOOTER -->    
+        <footer class="foot">
+            <div class="row">
+                <div class="col span-1-of-2 author-text">
+                    <img class="creator" src="resources/images/creator.jpg" alt="Creator/Author">
+                    <p>Dustin Badillo</p>
+                    <p>dd.badillo@gmail.com</p>
+                </div>
+                <div class="col span-1-of-2">
+                    <li><a href="#"><ion-icon name="logo-github"></ion-icon></a></li>
+                    <li><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a> </li>
+                        
+                </div>
+            </div>
+        
+        </footer>
+    
+    </body>
+
+
+
+    
+    
+
+</html>
